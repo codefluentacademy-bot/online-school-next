@@ -8,7 +8,7 @@ const coursesByCategory = {
       duration: "6 months", 
       slug: "web-design-html-css", 
       description: "Learn HTML and CSS from scratch", 
-      image: "/images/Webdesign.jpg", 
+      image: "/images/webdesign.jpg", 
       price: "¥18,500+", 
       sessionOptions: ["1 hour", "1.5 hours", "2 hours","4 sessions each month "] 
     },
@@ -207,19 +207,19 @@ const colors = ["bg-blue-50", "bg-white", "bg-purple-50"]; // alternating colors
 
 export default function CoursesPage() {
   return (
-    <main className="container mx-auto py-12 px-4 sm:px-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-black dark:text-white">Our Courses</h1>
-        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Choose from a variety of courses with flexible session durations. 
-        </p>
-      </div>
+   <main className="container mx-auto py-12 px-4 sm:px-8">
+  <div className="text-center mb-12">
+    <h1 className="text-4xl font-bold mb-4 text-purple-700 dark:text-purple-400">Our Courses</h1>
+    <p className="text-purple-600 dark:text-purple-300 max-w-2xl mx-auto">
+      Choose from a variety of courses with flexible session durations. 
+    </p>
+  </div>
 
       {Object.entries(coursesByCategory).map(([category, courses]) => (
         <section key={category} className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-black dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
-            {category}
-          </h2>
+         <h2 className="text-2xl font-semibold mb-6 text-purple-600 dark:text-purple-400 border-b border-gray-200 dark:border-gray-700 pb-2">
+  {category}
+</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {courses.map((course, index) => (
               <CourseCard
