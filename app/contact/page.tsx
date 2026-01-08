@@ -1,9 +1,10 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function ContactPage() {
+function ContactContent() {
   const searchParams = useSearchParams();
   const courseParam = searchParams?.get("course") || null;
   const priceParam = searchParams?.get("price") || null;
@@ -99,5 +100,15 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export const dynamic = 'force-dynamic';
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading contact information...</div>}>
+      <ContactContent />
+    </Suspense>
   );
 }
