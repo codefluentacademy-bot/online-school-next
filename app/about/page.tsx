@@ -11,7 +11,7 @@ interface Slide {
 
 const aboutImages: Slide[] = Array.from({ length: 15 }, (_, i) => ({
   id: i,
-  image: `/images/about${i + 1}.jpg`,
+  image: `/images/About${i + 1}.jpg`,
   alt: `About image ${i + 1}`,
 }));
 
