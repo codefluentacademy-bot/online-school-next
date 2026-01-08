@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 export default function ContactPage() {
-  const searchParams = useSearchParams?.();
+  const searchParams = useSearchParams();
   const courseParam = searchParams?.get("course") || null;
   const priceParam = searchParams?.get("price") || null;
 
