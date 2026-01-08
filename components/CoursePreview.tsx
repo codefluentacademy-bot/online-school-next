@@ -26,12 +26,12 @@ className="bg-white p-6 rounded-xl shadow"
 <h3 className="text-xl font-semibold mb-2">
 {course.title}
 </h3>
-<p className="text-gray-600 mb-4">
+<p className="text-white mb-4">
 Level: {course.level}
 </p>
 <Link
 href="/courses"
-className="text-blue-600 font-medium"
+className="text-white-mb-4"
 >
 Learn more →
 </Link>

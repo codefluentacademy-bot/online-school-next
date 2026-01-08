@@ -13,15 +13,15 @@ export default function HomePage() {
 
           {/* Text */}
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               CodeFluent-Academy
             </h1>
 
-            <p className="text-xl md:text-2xl font-medium mb-4 text-gray-700 dark:text-gray-300">
+            <p className="text-xl md:text-2xl font-medium mb-4 text-white">
               Excellence in Code, Language, and Learning
             </p>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            <p className="text-lg text-white mb-8 leading-relaxed">
               Learn programming, English, and future-ready skills with a certified
               educator. Personalized lessons for kids, teens, and adults worldwide.
             </p>
@@ -35,9 +35,9 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/courses"
-                className="px-6 py-3 rounded-lg border border-gray-400 dark:border-gray-600 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-              >
+    href="/courses"
+    className="px-6 py-3 rounded-lg border border-gray-400 dark:border-gray-600 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition dark:text-white"  // ← ADD dark:text-white HERE
+  >
                 View Courses
               </Link>
             </div>
@@ -59,10 +59,10 @@ export default function HomePage() {
       {/* ================= SERVICES ================= */}
       <section className="py-20 px-6 bg-white dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             What We Teach
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-white">
             Practical, engaging, and future-focused learning
           </p>
         </div>
@@ -78,8 +78,10 @@ export default function HomePage() {
               key={i}
               className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition"
             >
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <h3 className="text-xl font-semibold mb-3 text-white">
+                {item.title}
+              </h3>
+              <p className="text-white">
                 {item.desc}
               </p>
             </div>
@@ -92,11 +94,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Why Choose CodeFluent-Academy?
             </h2>
 
-            <ul className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+            <ul className="space-y-4 text-lg text-white">
               <li>✅ TESOL & TEFL Certified Educator</li>
               <li>✅ 5+ Years ESL Teaching Experience</li>
               <li>✅ 3+ Years Programming Instruction</li>
@@ -119,11 +121,11 @@ export default function HomePage() {
       {/* ================= ABOUT PREVIEW ================= */}
       <section className="py-20 px-6 bg-white dark:bg-zinc-900">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Meet Your Educator
           </h2>
 
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+          <p className="text-lg text-white leading-relaxed mb-8">
             Hi! I’m Sheena, a professional educator based in the Philippines,
             specializing in English language teaching and programming education.
             I’m passionate about helping students gain confidence, skills,
