@@ -1,16 +1,19 @@
-"use client";
+'use client';
 
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ContactPage() {
   const searchParams = useSearchParams();
-  const courseParam = searchParams.get("course");
-  const priceParam = searchParams.get("price");
+  const [courseParam, setCourseParam] = useState<string | null>(null);
+  const [priceParam, setPriceParam] = useState<string | null>(null);
 
-  // Your social media accounts gallery
+  useEffect(() => {
+    setCourseParam(searchParams.get("course"));
+    setPriceParam(searchParams.get("price"));
+  }, [searchParams]);
+
   const socialMediaAccounts = [
     {
       platform: "Email",
@@ -52,7 +55,7 @@ export default function ContactPage() {
       platform: "WhatsApp",
       username: "Message me",
       icon: "💬",
-      link: "https://wa.me/09496611141", 
+      link: "https://wa.me/09496611141",
       description: "Chat directly on WhatsApp",
       color: "bg-gradient-to-br from-green-50 to-teal-50",
       borderColor: "border-green-200",
@@ -61,7 +64,7 @@ export default function ContactPage() {
       platform: "YouTube",
       username: "CodeFluent Academy",
       icon: "🎥",
-      link: "https://youtube.com/@codefluent-academy?si=hzVHmJ3hQmzmbNrt", 
+      link: "https://youtube.com/@codefluent-academy?si=hzVHmJ3hQmzmbNrt",
       description: "Watch tutorial videos",
       color: "bg-gradient-to-br from-red-50 to-pink-50",
       borderColor: "border-red-200",
@@ -70,7 +73,7 @@ export default function ContactPage() {
       platform: "Twitter/X",
       username: "@codefluentacad",
       icon: "🐦",
-      link: "https://x.com/codefluentacad", 
+      link: "https://x.com/codefluentacad",
       description: "Follow for updates and tips",
       color: "bg-gradient-to-br from-gray-100 to-black/5",
       borderColor: "border-gray-200",
@@ -79,7 +82,7 @@ export default function ContactPage() {
       platform: "GitHub",
       username: "CodeFluentAcademy",
       icon: "💻",
-      link: "https://github.com/codefluentacademy-bot", 
+      link: "https://github.com/codefluentacademy-bot",
       description: "View coding projects and examples",
       color: "bg-gradient-to-br from-gray-800 to-black",
       borderColor: "border-gray-800",
@@ -95,7 +98,7 @@ export default function ContactPage() {
           Contact Me
         </h1>
         <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-6">
-          Choose any platform below to get in touch. I'm available on multiple channels for your convenience.
+          Choose any platform below to get in touch. Im available on multiple channels for your convenience.
         </p>
         
         {courseParam && (
@@ -160,7 +163,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-gray-300">LINE</p>
                     <p className="font-semibold">Connect on LINE for quick chat</p>
-                    <p className="text-sm text-gray-300">ID: Wg-kH5pm98</p>
+                    <p className="text-sm text-gray-300">ID: sheena_sensie</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +198,7 @@ export default function ContactPage() {
                 Response Time: Usually within 1-2 hours during business hours (9AM-6PM JST)
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                Feel free to reach out through any platform above. I'll get back to you as soon as possible!
+                Feel free to reach out through any platform above. I will get back to you as soon as possible!
               </p>
             </div>
           </div>
