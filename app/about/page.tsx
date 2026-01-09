@@ -26,51 +26,54 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <main className="bg-gray-50 dark:bg-black text-gray-900 dark:text-white">
+    <main className="min-h-screen">
+      {/* Background with proper contrast */}
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black -z-10" />
+      
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           {/* ================= LEFT: TEXT ================= */}
           <div className="space-y-6 text-lg leading-relaxed">
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
               About Me
             </h1>
 
-            <p>
-              Hello! My name is <strong>Sheena</strong>, a professional educator
-              based in the Philippines. I hold <strong>TESOL</strong> and{" "}
-              <strong>TEFL</strong> certifications and specialize in teaching
+            <p className="text-gray-800 dark:text-gray-200">
+              Hello! My name is <strong className="text-gray-900 dark:text-white font-semibold">Sheena</strong>, a professional educator
+              based in the Philippines. I hold <strong className="text-gray-900 dark:text-white font-semibold">TESOL</strong> and{" "}
+              <strong className="text-gray-900 dark:text-white font-semibold">TEFL</strong> certifications and specialize in teaching
               English as a Second Language to students of different ages and
               backgrounds.
             </p>
 
-            <p>
-              I have more than <strong>5 years of experience</strong> as an ESL
-              teacher and <strong>3 years</strong> as a programming teacher. I
+            <p className="text-gray-800 dark:text-gray-200">
+              I have more than <strong className="text-gray-900 dark:text-white font-semibold">5 years of experience</strong> as an ESL
+              teacher and <strong className="text-gray-900 dark:text-white font-semibold">3 years</strong> as a programming teacher. I
               focus on clear explanations, confidence building, and practical
               learning that students can apply in real life.
             </p>
 
-            <p>
+            <p className="text-gray-800 dark:text-gray-200">
               I have worked with international companies and institutions such as{" "}
-              <strong>
+              <strong className="text-gray-900 dark:text-white font-semibold">
                 Bitu Vietnam, 51Talk (China), Andres Bonifacio College
               </strong>, and{" "}
-              <strong>Sun Asterisk Software Development</strong>.
+              <strong className="text-gray-900 dark:text-white font-semibold">Sun Asterisk Software Development</strong>.
             </p>
 
-            <p>
-              Outside teaching, I enjoy <strong>driving, baking, coding,
-              outdoor games, and softball</strong>. Although I don’t have a large
+            <p className="text-gray-800 dark:text-gray-200">
+              Outside teaching, I enjoy <strong className="text-gray-900 dark:text-white font-semibold">driving, baking, coding,
+              outdoor games, and softball</strong>. Although I do not have a large
               group of friends, I genuinely hope to meet my students from{" "}
-              <strong>China, Japan, and the United States</strong> someday.
+              <strong className="text-gray-900 dark:text-white font-semibold">China, Japan, and the United States</strong> someday.
               Teaching allows me to connect with people across cultures, and
-              that’s what I love most about it.
+              that is what I love most about it.
             </p>
           </div>
 
           {/* ================= RIGHT: IMAGE CAROUSEL ================= */}
-          <div className="relative w-full bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-4">
+          <div className="relative w-full bg-white dark:bg-zinc-800 rounded-2xl shadow-xl p-4 border border-gray-200 dark:border-gray-700">
             <div className="relative w-full aspect-4/3">
               {aboutImages.map((slide, i) => (
                 <div
@@ -97,8 +100,11 @@ export default function AboutPage() {
                   key={i}
                   onClick={() => setIndex(i)}
                   className={`w-3 h-3 rounded-full transition ${
-                    i === index ? "bg-gray-800 dark:bg-white" : "bg-gray-400"
+                    i === index 
+                      ? "bg-gray-800 dark:bg-white" 
+                      : "bg-gray-300 dark:bg-gray-600"
                   }`}
+                  aria-label={`Go to slide ${i + 1}`}
                 />
               ))}
             </div>
